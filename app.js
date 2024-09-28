@@ -1,11 +1,7 @@
-// Declare variables and modify their values
+// sumar dos variables
+let alumnos = 50;
+let alumnas = 30;
 
-let numberOfCats = 2;
-let numberOfDogs = 4;
+let totalAlumnos = alumnas + alumnos;
+console.log(totalAlumnos);
 
-console.log(numberOfCats, numberOfDogs);
-
-// Modificar el valor de una variable
-
-numberOfCats = 4; // Esta sería la forma más simple de hacerlo, reasignando le otro valor a la variable.
- 
