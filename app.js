@@ -1,11 +1,9 @@
+// Constantes
+const hoursPerDay = 24;
 
-let numberOfSeasons = 6;
-let numberOfEpisodes = 12;
+console.log(hoursPerDay);
 
-// To calculate totalShowTime 
+const horasPorDía = 24;
+const minutosPorHora = 60;
+const segundosPorMinuto = 60;
 
-let episodeTime = 37;
-let commercialTime = 8;
-
-let totalShowTime = (episodeTime + commercialTime) * numberOfEpisodes * numberOfSeasons;
-console.log(totalShowTime);
