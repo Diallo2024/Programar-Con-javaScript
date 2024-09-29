@@ -1,3 +1,6 @@
+const { Title } = require("@mui/icons-material");
+const { duration } = require("@mui/material");
+
 // Constantes
 const hoursPerDay = 24;
 
@@ -36,3 +39,27 @@ let episodeDuration = 45;
 let hasBeenWatched = true;
 
 console.log(episodeTitle + ' ' + episodeDuration + ' ' + hasBeenWatched);
+
+
+//Define objects and their attributes with classes
+let myBook = {
+    Title: 'The Secret',
+    author: 'Rhonda Byrne',
+    numberOfPages: '224',
+    isAvailable: true
+};
+console.log(myBook);
+
+let moovie = {
+    Title: 'The One',
+    duration: 60,
+    hasBeenWatched: false,
+};
+console.log(moovie);
+
+let moovieTitle = moovie.Title;
+console.log(moovieTitle); // The one.
+
+let moovieDuration = moovie.duration;
+console.log(moovieDuration); // 60.
+
