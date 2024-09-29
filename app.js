@@ -1,4 +1,4 @@
-const { Title } = require("@mui/icons-material");
+const { Title, TimeToLeave } = require("@mui/icons-material");
 const { duration } = require("@mui/material");
 
 // Constantes
@@ -42,13 +42,13 @@ console.log(episodeTitle + ' ' + episodeDuration + ' ' + hasBeenWatched);
 
 
 //Define objects and their attributes with classes
-let myBook = {
+let myLibro = {
     Title: 'The Secret',
     author: 'Rhonda Byrne',
     numberOfPages: '224',
     isAvailable: true
 };
-console.log(myBook);
+console.log(myLibro);
 
 let moovie = {
     Title: 'The One',
@@ -71,3 +71,26 @@ let episodio = {
 
 console.log(episodio);
 
+//Classes
+
+class book {
+    constructor(title, author, pages) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+    }
+}
+
+let myBook = new Book('The Secret', 'Rhonda Byrne', 224);
+
+class series {
+    constructor (title, duration, watched) {
+        this.title = Title;
+        this.duration = duration;
+        this.watched = watched;
+    }
+};
+
+firstSerie = new series ('the First', '45', 'true');
+secondSerie = new series ('the second', '60', 'false');
+thirdSeire = new series ('the third', '60', 'false');
