@@ -94,3 +94,19 @@ class series {
 firstSerie = new series ('the First', '45', 'true');
 secondSerie = new series ('the second', '60', 'false');
 thirdSeire = new series ('the third', '60', 'false');
+
+//Manage complexity with the right collection
+
+let invitados = []; //This is how to create an Array object.
+
+let myInvitados = ['Jorge', 'Sarah', 'Audrey'];
+
+let firstGuest = myInvitados[0]; // 'Jorge'
+let ThirdGuest = myInvitados[2]; // 'Audrey'
+let undefinedGuest = myInvitados[6]; // undefined
+
+// Using an Array in the code to store variables
+
+let allInvitados = [
+    firstGuest, ThirdGuest, undefinedGuest
+];
