@@ -63,3 +63,11 @@ console.log(moovieTitle); // The one.
 let moovieDuration = moovie.duration;
 console.log(moovieDuration); // 60.
 
+let episodio = {
+    titulo: 'the one',
+    duracion: 45,
+    visto: true
+};
+
+console.log(episodio);
+
