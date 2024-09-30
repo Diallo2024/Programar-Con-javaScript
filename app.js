@@ -81,7 +81,7 @@ class book {
     }
 }
 
-let myBook = new Book('The Secret', 'Rhonda Byrne', 224);
+let myBook = new book('The Secret', 'Rhonda Byrne', 224);
 
 class series {
     constructor (title, duration, watched) {
@@ -110,3 +110,48 @@ let undefinedGuest = myInvitados[6]; // undefined
 let allInvitados = [
     firstGuest, ThirdGuest, undefinedGuest
 ];
+
+let numberOfGuests = 10;
+let ticketsRemaining = false;
+let artistName = 'Bob';
+
+let artistProfile = {
+    numberOfGuests: numberOfGuests,
+    ticketsRemaining: ticketsRemaining,
+    artistName: artistName
+};
+
+let artistArrray = [numberOfGuests, ticketsRemaining, artistName];
+console.log(artistProfile);
+console.log(artistArrray);
+
+//Other way to use primitives types, objects and arrays in javaScript.
+let numberOfBooks = 20;
+let totalNumerOfBooks = numberOfBooks; // 20.
+
+// then
+
+let profilArtista = {
+    name: 'Henderson Bob',
+    age: 30,
+    available: true
+};
+
+let allProfiles = [profilArtista]; // new Array containing the bove object.
+
+profilArtista.available = false; // changing the object.
+
+console.log(allProfiles); // will show {name: 'Henderson', age: 30, available: false }
+
+let guests = ['oury', 'kate', 'mateo'];
+
+guests.push('Paul Kelerman');
+console.log(guests);
+
+guests.unshift('Obama');
+console.log(guests);
+
+guests.pop();
+console.log(guests);
+
+
