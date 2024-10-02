@@ -154,4 +154,72 @@ console.log(guests);
 guests.pop();
 console.log(guests);
 
+//JavaScript: one language, multiple environments
 
+let huespedes = 50;
+console.log(huespedes); // is different than if we type:
+
+/*console.log(name1);  undefined
+let name1 = 'Obama'; */
+
+// flow, if/else syntaxe
+
+/*if (myBoolean) {
+    // reat to myBoolean being true
+} else {
+    //react to myBoolean being false
+}*/
+
+let userLogedIn = true;
+if(userLogedIn) {
+    console.log('the User is logged succefully');
+}else {
+    console.log('Alert! Try it again');
+}
+
+let age = 18;
+
+if (age >= 18) {
+    console.log('Eres mayor de ead');
+} else {
+    console.log('Sigues siendo menor de edad');
+}
+
+const totalSillas = 30;
+let totalInvitados = 25;
+
+if (totalSillas > totalInvitados) {
+    console.log('No quedan sillas');
+
+} else {
+    console.log('Nos faltan sillas');
+}
+
+class episodios {
+    constructor (titulo, duración, visto) {
+        this.titulo = titulo;
+        this.duracion = duracion;
+
+        if (visto == duración) {
+            this.visto = true;
+
+          } else {
+            this.visto = false;
+          }
+    }
+}
+
+class episodes {
+    constructor (title, duration, minutesWatched) {
+        this.title = title;
+        this.duracion = duration;
+
+        if(minutesWatched == duration) {
+            this.hasBeenWatched = true;
+        } else {
+            this.hasBeenWatched = false;
+        }
+    }
+}
+
+export default hasBeenWatched();
