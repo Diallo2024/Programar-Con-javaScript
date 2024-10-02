@@ -222,4 +222,19 @@ class episodes {
     }
 }
 
-export default hasBeenWatched();
+let userIsLoggedIn = true;
+let usserhasPremiunAccount = true;
+let userHasMegaPremiumAccount = false;
+
+if(userIsLoggedIn && usserhasPremiunAccount) {
+    console.log('User is logged and has a premium account');
+}else {
+    console.log('User is not logged');
+}
+
+userHasMegaPremiumAccount && usserhasPremiunAccount // false
+userIsSignedIn || userHasMegaPremiumAccount // true
+userIsLoggedIn || userHasMegaPremiumAccount // true
+
+!userIsLoggedIn // false
+!userHasMegaPremiumAccount // true
