@@ -84,16 +84,16 @@ class book {
 let myBook = new book('The Secret', 'Rhonda Byrne', 224);
 
 class series {
-    constructor (title, duration, watched) {
+    constructor(title, duration, watched) {
         this.title = Title;
         this.duration = duration;
         this.watched = watched;
     }
 };
 
-firstSerie = new series ('the First', '45', 'true');
-secondSerie = new series ('the second', '60', 'false');
-thirdSeire = new series ('the third', '60', 'false');
+firstSerie = new series('the First', '45', 'true');
+secondSerie = new series('the second', '60', 'false');
+thirdSeire = new series('the third', '60', 'false');
 
 //Manage complexity with the right collection
 
@@ -171,9 +171,9 @@ let name1 = 'Obama'; */
 }*/
 
 let userLogedIn = true;
-if(userLogedIn) {
+if (userLogedIn) {
     console.log('the User is logged succefully');
-}else {
+} else {
     console.log('Alert! Try it again');
 }
 
@@ -196,25 +196,25 @@ if (totalSillas > totalInvitados) {
 }
 
 class episodios {
-    constructor (titulo, duración, visto) {
+    constructor(titulo, duración, visto) {
         this.titulo = titulo;
         this.duracion = duracion;
 
         if (visto == duración) {
             this.visto = true;
 
-          } else {
+        } else {
             this.visto = false;
-          }
+        }
     }
 }
 
 class episodes {
-    constructor (title, duration, minutesWatched) {
+    constructor(title, duration, minutesWatched) {
         this.title = title;
         this.duracion = duration;
 
-        if(minutesWatched == duration) {
+        if (minutesWatched == duration) {
             this.hasBeenWatched = true;
         } else {
             this.hasBeenWatched = false;
@@ -226,9 +226,9 @@ let userIsLoggedIn = true;
 let usserhasPremiunAccount = true;
 let userHasMegaPremiumAccount = false;
 
-if(userIsLoggedIn && usserhasPremiunAccount) {
+if (userIsLoggedIn && usserhasPremiunAccount) {
     console.log('User is logged and has a premium account');
-}else {
+} else {
     console.log('User is not logged');
 }
 
@@ -238,3 +238,61 @@ userIsLoggedIn || userHasMegaPremiumAccount // true
 
 !userIsLoggedIn // false
 !userHasMegaPremiumAccount // true
+
+class Episode {
+    constructor(title, duration, minutesWatched, watchedText, continueWatching) {
+        this.title = title;
+        this.duration = duration;
+        this.watchedExt = watchedText;
+        this.continueWatching = continueWatching;
+
+        this.continueWatching = false;
+
+        if (minutesWatched === 0) {
+            this.watchedText = 'Not yet watched';
+        } else if (minutesWatched > 0 && minutesWatched < duration) {
+            this.watchedText = 'Watching';
+            this.continueWatching = true;
+        } else {
+            this.watchedText = 'Watched';
+        }
+
+
+    }
+}
+
+let firstEpisode = new Episode('Dark Beginnings', 45, 45);
+let secondEpisode = new Episode('The Mystery Continues', 45, 10);
+let thirdEpisode = new Episode('An Unexpected Climax', 60, 0);
+
+const firstUser = {
+    name: 'Bill Keam',
+    age: 25,
+    accountLevel: 'normal'
+};
+
+const secondUser = {
+    name: 'Maria Dean',
+    age: 33,
+    accountLevel: 'premium'
+};
+
+thirdUser = {
+    name: 'Nelson',
+    age: 22,
+    accountLevel: 'mega-premium'
+};
+
+switch (firstUser.accountLevel) {
+    case 'nomal':
+        console.log('You have a normal account');
+        break;
+    case 'premium':
+        console.log('You have a primium account');
+        break;
+    case 'mega-premium':
+        console.log('You have a mega-premium account');
+        break;
+    default:
+        console.log('unknown account type!');
+}
