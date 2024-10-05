@@ -318,11 +318,41 @@ const passengers = [
     'Kate clinton',
     'Naomi Cambell'
 ];
-
+// The loop for ordered
 for (let i = 0; i < passengers.length; i++) {
     console.log('Bording ' + passengers[i]);
 };
 
+// the loop for ... in
 for (let i in passengers) {
     console.log('Bording Passenger ' + passengers[i]);
+};
+
+// The loop for ... of
+
+for(let passenger of passengers) {
+    console.log('Boarding passenger ' + passenger );
+};
+
+const pasajeros = [
+   {
+    name: 'Will Alexander',
+    ticketNumber: 2024
+   },
+   {
+    name: 'Jose',
+    ticketNumber: 2023
+   },
+   {
+    name: 'Alvaro',
+    ticketNumber: 2022
+   },
+   {
+    name: 'Maria',
+    ticketNumber:2021
+   }
+]
+
+for(let pasajero of pasajeros ) {
+    console.log('Boarding pasajero ' + pasajero.name + 'Witn ticket number ' + pasajero.ticketNumber);
 };
