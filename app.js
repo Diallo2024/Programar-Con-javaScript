@@ -296,3 +296,33 @@ switch (firstUser.accountLevel) {
     default:
         console.log('unknown account type!');
 }
+
+// Using the right loop to repeat tasks
+
+const numberOfPassengers = 10;
+
+for(let i = 0; i < numberOfPassengers; i++) {
+    console.log('Passenger Onboarded');
+}
+
+console.log('All passengers Onboarded');
+
+
+/*for (i = 0; i < passengers.length; i++) {
+    console.log('Passenger Onboarded');
+};*/
+
+const passengers = [
+    'Bill Caro',
+    'Sandro cleo',
+    'Kate clinton',
+    'Naomi Cambell'
+];
+
+for (let i = 0; i < passengers.length; i++) {
+    console.log('Bording ' + passengers[i]);
+};
+
+for (let i in passengers) {
+    console.log('Bording Passenger ' + passengers[i]);
+};
