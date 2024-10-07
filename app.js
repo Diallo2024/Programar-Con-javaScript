@@ -401,10 +401,17 @@ class Episode {
     firstname: 'Sarah',
     age: -44
   };
-  if (otherUser.firstname && otherUser.lastName) {
+  /*if (otherUser.firstname && otherUser.lastName) {
     console.log(otherUser.firstname + ' ' + otherUser.lastName);
   }
   else {
     alert('User name incomplet!');
-  }
+  }*/
+
+    try {
+        console.log(thirdUser.firstname + ' ' + thirdUser.lastName);
+    } catch (error) {
+        alert('An error occured!');
+        console.log(error);
+    }
   
