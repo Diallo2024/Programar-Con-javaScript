@@ -388,3 +388,23 @@ class Episode {
   }
 
   console.log(passengersBoarded + ' successfully on board!');
+
+  // Manage errors in the coe
+
+  const user = {
+    firstname: 'Alexandre',
+    lastName: 'Will',
+    age: 33
+  };
+
+  const otherUser = {
+    firstname: 'Sarah',
+    age: -44
+  };
+  if (otherUser.firstname && otherUser.lastName) {
+    console.log(otherUser.firstname + ' ' + otherUser.lastName);
+  }
+  else {
+    alert('User name incomplet!');
+  }
+  
