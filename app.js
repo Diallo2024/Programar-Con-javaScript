@@ -439,4 +439,30 @@ for(let pasajero of pasajeros ) {
         }
         const result = sum / ratings.length;
         return result;
+    };
+
+    class Guest {
+        constructor (name, age, vip) {
+            this.name = name;
+            this.age = age;
+            this.vip = vip;
+        }
     }
+
+    const primerGuest = new Guest ('Will Alexander', 33, false);
+
+    const toggleGuestVip = (guest) => {
+        let newGuest = guest;
+        newGuest.vip = !newGuest.vip;
+        return newGuest;
+    }
+
+    console.log('First Guest VIP status is currently ' + primerGuest.vip);
+
+    const newGuest = toggleGuestVip(primerGuest);
+
+    console.log('New guest VIP status is ' + newGuest.vip);
+    console.log('First guest VIP status is now ' + firstGuest.vip);
+
+        
+    
