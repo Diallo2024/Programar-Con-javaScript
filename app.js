@@ -431,7 +431,7 @@ for(let pasajero of pasajeros ) {
 
     const calculateAverageRating = (ratings) => {
         let sum = 0;
-        for(let i in ratings) {
-            sum += ratings[i];
+        for(let rating of ratings) {
+            sum += rating;
         }
     }
