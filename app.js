@@ -359,7 +359,7 @@ for(let pasajero of pasajeros ) {
 
 //More Exemples
 
-class Episode {
+/*class Episode {
     constructor(title, duration, hasBeenWatched) {
       this.title = title;
       this.duration = duration;
@@ -375,7 +375,7 @@ class Episode {
 
   for (let episode of episodes) {
     episode.hasBeenWatched = false;
-  };
+  };*/
 
   let seatsLeft = 10;
   let passengersStillToBoard = 8;
@@ -406,7 +406,7 @@ class Episode {
   }
   else {
     alert('User name incomplet!');
-  }*/
+  }
 
     try {
         console.log(thirdUser.firstname + ' ' + thirdUser.lastName);
@@ -414,4 +414,24 @@ class Episode {
         alert('An error occured!');
         console.log(error);
     }
-  
+  */
+    let pasengers = 0;
+
+    if (pasengers <= 10) {
+        pasengers += 10;
+    } else {
+        pasengers -= (pasengers - 10);
+    };
+
+    const add = (a, b) => {
+        const result = a + b;
+        return result;
+    }
+    console.log(add(3, 4));
+
+    const calculateAverageRating = (ratings) => {
+        let sum = 0;
+        for(i = 0; i < ratings.length; i++) {
+            sum += ratings[i];
+        }
+    }
