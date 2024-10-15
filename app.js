@@ -301,7 +301,7 @@ switch (firstUser.accountLevel) {
 
 const numberOfPassengers = 10;
 
-for(let i = 0; i < numberOfPassengers; i++) {
+for (let i = 0; i < numberOfPassengers; i++) {
     console.log('Passenger Onboarded');
 }
 
@@ -330,32 +330,32 @@ for (let i in passengers) {
 
 // The loop for ... of
 
-for(let passenger of passengers) {
-    console.log('Boarding passenger ' + passenger );
+for (let passenger of passengers) {
+    console.log('Boarding passenger ' + passenger);
 };
 
 const pasajeros = [
-   {
-    name: 'Will Alexander',
-    ticketNumber: 2024
-   },
-   {
-    name: 'Jose',
-    ticketNumber: 2023
-   },
-   {
-    name: 'Alvaro',
-    ticketNumber: 2022
-   },
-   {
-    name: 'Maria',
-    ticketNumber:2021
-   }
+    {
+        name: 'Will Alexander',
+        ticketNumber: 2024
+    },
+    {
+        name: 'Jose',
+        ticketNumber: 2023
+    },
+    {
+        name: 'Alvaro',
+        ticketNumber: 2022
+    },
+    {
+        name: 'Maria',
+        ticketNumber: 2021
+    }
 ]
 
-for(let pasajero of pasajeros ) {
+for (let pasajero of pasajeros) {
     console.log('Boarding pasajero ' + pasajero.name + 'Witn ticket number ' + pasajero.ticketNumber);
-}; 
+};
 
 //More Exemples
 
@@ -377,92 +377,109 @@ for(let pasajero of pasajeros ) {
     episode.hasBeenWatched = false;
   };*/
 
-  let seatsLeft = 10;
-  let passengersStillToBoard = 8;
-  let passengersBoarded = 0;
+let seatsLeft = 10;
+let passengersStillToBoard = 8;
+let passengersBoarded = 0;
 
-  while (seatsLeft > 0 && passengersStillToBoard > 0) {
+while (seatsLeft > 0 && passengersStillToBoard > 0) {
     passengersBoarded++;
     seatsLeft--;
     passengersBoarded--;
-  }
+}
 
-  console.log(passengersBoarded + ' successfully on board!');
+console.log(passengersBoarded + ' successfully on board!');
 
-  // Manage errors in the coe
+// Manage errors in the coe
 
-  const user = {
+const user = {
     firstname: 'Alexandre',
     lastName: 'Will',
     age: 33
-  };
+};
 
-  const otherUser = {
+const otherUser = {
     firstname: 'Sarah',
     age: -44
-  };
-  /*if (otherUser.firstname && otherUser.lastName) {
-    console.log(otherUser.firstname + ' ' + otherUser.lastName);
+};
+/*if (otherUser.firstname && otherUser.lastName) {
+  console.log(otherUser.firstname + ' ' + otherUser.lastName);
+}
+else {
+  alert('User name incomplet!');
+}
+
+  try {
+      console.log(thirdUser.firstname + ' ' + thirdUser.lastName);
+  } catch (error) {
+      alert('An error occured!');
+      console.log(error);
   }
-  else {
-    alert('User name incomplet!');
-  }
+*/
+let pasengers = 0;
 
-    try {
-        console.log(thirdUser.firstname + ' ' + thirdUser.lastName);
-    } catch (error) {
-        alert('An error occured!');
-        console.log(error);
+if (pasengers <= 10) {
+    pasengers += 10;
+} else {
+    pasengers -= (pasengers - 10);
+};
+
+const add = (a, b) => {
+    const result = a + b;
+    return result;
+}
+console.log(add(3, 4));
+
+const calculateAverageRating = (ratings) => {
+    if (ratings.length === 0) {
+        return 0;
     }
-  */
-    let pasengers = 0;
-
-    if (pasengers <= 10) {
-        pasengers += 10;
-    } else {
-        pasengers -= (pasengers - 10);
-    };
-
-    const add = (a, b) => {
-        const result = a + b;
-        return result;
+    let sum = 0;
+    for (let rating of ratings) {
+        sum += rating;
     }
-    console.log(add(3, 4));
+    const result = sum / ratings.length;
+    return result;
+};
 
-    const calculateAverageRating = (ratings) => {
-        if(ratings.length === 0) {
-            return 0;
-        }
-        let sum = 0;
-        for(let rating of ratings) {
-            sum += rating;
-        }
-        const result = sum / ratings.length;
-        return result;
-    };
-
-    class Guest {
-        constructor (name, age, vip) {
-            this.name = name;
-            this.age = age;
-            this.vip = vip;
-        }
+class Guest {
+    constructor(name, age, vip) {
+        this.name = name;
+        this.age = age;
+        this.vip = vip;
     }
+}
 
-    const primerGuest = new Guest ('Will Alexander', 33, false);
+const primerGuest = new Guest('Will Alexander', 33, false);
 
-    const toggleGuestVip = (guest) => {
-        let newGuest = guest;
-        newGuest.vip = !newGuest.vip;
-        return newGuest;
+const toggleGuestVip = (guest) => {
+    let newGuest = guest;
+    newGuest.vip = !newGuest.vip;
+    return newGuest;
+}
+
+console.log('First Guest VIP status is currently ' + primerGuest.vip);
+
+const newGuest = toggleGuestVip(primerGuest);
+
+console.log('New guest VIP status is ' + newGuest.vip);
+console.log('First guest VIP status is now ' + firstGuest.vip);
+
+class BankAccount {
+    constructor(owner, balance) {
+        this.owner = owner;
+        this.balance = balance;
     }
+    showBalance() {
+        console.log('balance: ' + this.balance + ' EURO');
+    }
+    deposit(amount) {
+        console.log('Depositing ' + amount + ' EURO');
+        this.balance += amount;
+        this.showBalance();
+    }
+}
+const newAccount = new BankAccount('Will Alexander', 700);
 
-    console.log('First Guest VIP status is currently ' + primerGuest.vip);
+newAccount.showBalance();
+newAccount.deposit(100);
 
-    const newGuest = toggleGuestVip(primerGuest);
-
-    console.log('New guest VIP status is ' + newGuest.vip);
-    console.log('First guest VIP status is now ' + firstGuest.vip);
-
-        
-    
