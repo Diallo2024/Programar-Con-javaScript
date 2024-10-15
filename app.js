@@ -477,9 +477,16 @@ class BankAccount {
         this.balance += amount;
         this.showBalance();
     }
+    withdrow(amount) {
+        if (amount > this.balance) {
+            console.log('withdrowal ' + amount + ' EURO');
+        } else {
+            this.balance -= amount;
+            this.showBalance();
+        }
+    }
 }
 const newAccount = new BankAccount('Will Alexander', 700);
 
-newAccount.showBalance();
-newAccount.deposit(100);
+newAccount.withdrow(399);
 
